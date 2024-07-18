@@ -1,0 +1,137 @@
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    height: 600px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background:linear-gradient(to right,#e07bad 0%, #73c0f1 100%);
+}
+
+
+
+.container form .title{
+    font-size: 40px;
+    margin: 20px 0 10px 0 ;
+}
+
+.container form .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+
+}
+
+.container form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.container form .underline::before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+}
+
+.container form .underline:after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    background: red;
+    transform: scaleX(0);
+    transform-origin:left ;
+
+}
+
+.container form .input-box input:focus~ .underline:after{
+    transform: scaleX(1);
+    transform-origin:left ;
+    transition: all 0.3s ease;
+    
+}
+
+.container form .input-box input[type="submit"]{
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: red;
+}
+
+.container form .input-box input[type="submit"]:hover{
+    background: #a7a6a7;
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.container .text{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px 0;
+}
+
+.container .github a,
+.container .twitter a,
+.container .facebook a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #ffffff;
+    border-radius: 5px;
+
+}
+
+.container .github a{
+    background-color: #242922;
+    margin: 20px 0 15px 0;
+    
+
+}
+
+.container .github a:hover{
+    background-color: #687888;
+}
+
+.container .twitter a{
+    background-color: #1ad1f2;
+    margin: 20px 0 15px 0;
+}
+
+.container .twitter a:hover{
+    background-color: #687888;
+}
+
+.container .facebook a{
+    background-color: #4267b2;
+    margin: 20px 0 15px 0;
+}
+
+.container .facebook a:hover{
+    background-color: #687888
+}
